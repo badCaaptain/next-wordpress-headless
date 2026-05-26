@@ -137,6 +137,16 @@ export default async function HomePage() {
               View Rates
             </a>
           )}
+
+          {acf?.cta_section?.btn?.url && (
+              <a
+                className="outline-btn"
+                href={acf.banner_section.btn.url}
+                target={acf.banner_section.btn.target || "_self"}
+              >
+                {acf.banner_section.btn.title}
+              </a>
+            )}
         </section>
       )}
 
@@ -162,6 +172,17 @@ export default async function HomePage() {
             {acf?.slower_section?.btn && (
               <a className="dark-btn" href={acf.slower_section.btn}>
                 Reserve a Slip
+              </a>
+            )}
+
+
+          {acf?.slower_section?.btn?.url && (
+              <a
+                className="dark-btn"
+                href={acf.banner_section.btn.url}
+                target={acf.banner_section.btn.target || "_self"}
+              >
+                {acf.banner_section.btn.title}
               </a>
             )}
           </div>
@@ -244,6 +265,16 @@ export default async function HomePage() {
               Reserve a Slip
             </a>
           )}
+
+          {acf?.stay_with_us_section?.btn?.url && (
+              <a
+                className="dark-btn"
+                href={acf.banner_section.btn.url}
+                target={acf.banner_section.btn.target || "_self"}
+              >
+                {acf.banner_section.btn.title}
+              </a>
+            )}
         </section>
       )}
  
