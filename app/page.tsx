@@ -132,11 +132,6 @@ export default async function HomePage() {
             />
           )}
 
-          {acf?.cta_section?.btn && (
-            <a className="dark-btn" href={acf.cta_section.btn}>
-              View Rates
-            </a>
-          )}
 
           {acf?.cta_section?.btn?.url && (
               <a
@@ -167,12 +162,6 @@ export default async function HomePage() {
                   __html: acf.slower_section.content,
                 }}
               />
-            )}
-
-            {acf?.slower_section?.btn && (
-              <a className="dark-btn" href={acf.slower_section.btn}>
-                Reserve a Slip
-              </a>
             )}
 
 
@@ -258,12 +247,6 @@ export default async function HomePage() {
                 __html: acf.stay_with_us_section.content,
               }}
             />
-          )}
-
-          {acf?.stay_with_us_section?.link && (
-            <a className="dark-btn" href={acf.stay_with_us_section.link}>
-              Reserve a Slip
-            </a>
           )}
 
           {acf?.stay_with_us_section?.btn?.url && (
