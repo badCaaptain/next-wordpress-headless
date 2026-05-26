@@ -13,11 +13,11 @@ a {
 }
 
 .hero {
-  min-height: 720px;
-  background: linear-gradient(rgba(0, 35, 90, .45), rgba(0, 20, 60, .65)),
-    url("https://grey-moose-264563.hostingersite.com/wp-content/uploads/2026/05/05868f48-0b5f-4ea7-b607-9d056e4e5902-1.png") center/cover no-repeat;
-  color: #fff;
-  position: relative;
+    color: #fff;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .site-header {
@@ -94,14 +94,15 @@ a {
 }
 
 .section {
-  width: 88%;
-  max-width: 1200px;
-  margin: auto;
-  padding: 90px 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 70px;
-  align-items: center;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 90px 0;
+    display: grid;
+    background: #fff;
 }
 
 .image-grid {
@@ -112,12 +113,14 @@ a {
 }
 
 .ph {
-  background: linear-gradient(135deg, #c8d4dd, #70899d);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
+    /* color: #fff; */
+    /* background: linear-gradient(135deg, #c8d4dd, #70899d); */
+    border-radius: 8px;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* display: flex; */
+    width: 100%;
+    object-fit: cover;
 }
 
 .ph-small {
@@ -140,6 +143,10 @@ a {
   font-size: 44px;
   line-height: 1.15;
   margin: 0 0 25px;
+  color:#0F1932;
+}
+.hero-content h1 span, .hero-content h2 span, .hero-content h3 span, .section h2 span, .dockage h2 span, .comforts h2 span, .cta h2 span{
+  font-style: italic;
 }
 
 em {
@@ -171,6 +178,10 @@ em {
   padding: 75px 20px;
   background: linear-gradient(rgba(207, 187, 72, .75), rgba(207, 187, 72, .75)),
     url("https://grey-moose-264563.hostingersite.com/wp-content/uploads/2026/05/Rectangle-8-3.png") center/cover no-repeat;
+}
+
+.location{
+  background: #fff;
 }
 
 .dark-btn {
