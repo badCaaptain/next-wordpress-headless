@@ -18,6 +18,7 @@ a {
     position: relative;
     display: flex;
     justify-content: center;
+        align-items: center;
 }
 
 .site-header {
@@ -94,15 +95,15 @@ a {
 }
 
 .section {
+    background: #fff;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 70px;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 90px 0;
+    padding: 90px 20px;
     display: grid;
-    background: #fff;
 }
 
 .image-grid {
