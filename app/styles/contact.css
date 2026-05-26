@@ -1,0 +1,218 @@
+.contact-page {
+  background: #f8f3eb;
+}
+
+/* ==========================
+   HERO
+========================== */
+
+.contact-hero {
+  position: relative;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  padding: 120px 20px;
+}
+
+.contact-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(30, 30, 30, 0.45);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: 64px;
+  line-height: 1.1;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 20px;
+  line-height: 1.8;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+/* ==========================
+   CONTACT CONTENT
+========================== */
+
+.contact-content {
+  padding: 100px 20px;
+}
+
+.contact-container {
+  max-width: 1320px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+}
+
+/* ==========================
+   LEFT SIDE
+========================== */
+
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.contact-item h4 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #5c5c5c;
+  margin-bottom: 10px;
+}
+
+.contact-item a,
+.contact-item p {
+  font-size: 28px;
+  line-height: 1.5;
+  color: #1e1e1e;
+  text-decoration: none;
+  margin: 0;
+}
+
+.contact-item a:hover {
+  color: #7a6b52;
+}
+
+.map-img {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  object-fit: cover;
+  margin-top: 10px;
+}
+
+/* ==========================
+   FORM BOX
+========================== */
+
+.contact-form-box {
+  background: #c7beb0;
+  border-radius: 24px;
+  padding: 60px;
+}
+
+.contact-form-box h2 {
+  font-size: 52px;
+  font-weight: 400;
+  margin-bottom: 40px;
+  color: #1d1d1d;
+}
+
+/* Contact Form 7 */
+
+.form-shortcode p {
+  margin-bottom: 18px;
+}
+
+.form-shortcode input,
+.form-shortcode textarea,
+.form-shortcode select {
+  width: 100%;
+  border: none;
+  background: #f8f3eb;
+  border-radius: 12px;
+  padding: 18px 22px;
+  font-size: 16px;
+  outline: none;
+}
+
+.form-shortcode textarea {
+  min-height: 180px;
+  resize: none;
+}
+
+.form-shortcode input::placeholder,
+.form-shortcode textarea::placeholder {
+  color: #777;
+}
+
+.form-shortcode .wpcf7-submit {
+  width: auto;
+  border: none;
+  background: #1d1d1d;
+  color: #fff;
+  padding: 18px 40px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.form-shortcode .wpcf7-submit:hover {
+  transform: translateY(-2px);
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 991px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .hero-content h1 {
+    font-size: 48px;
+  }
+
+  .contact-form-box {
+    padding: 40px 30px;
+  }
+
+  .contact-form-box h2 {
+    font-size: 38px;
+  }
+
+  .contact-item a,
+  .contact-item p {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-hero {
+    min-height: 350px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+  }
+
+  .contact-content {
+    padding: 70px 20px;
+  }
+
+  .contact-form-box {
+    border-radius: 18px;
+    padding: 30px 20px;
+  }
+
+  .contact-form-box h2 {
+    font-size: 30px;
+  }
+}

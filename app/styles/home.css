@@ -1,0 +1,260 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #1d2a3d;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hero {
+  min-height: 720px;
+  background: linear-gradient(rgba(0, 35, 90, .45), rgba(0, 20, 60, .65)),
+    url("https://grey-moose-264563.hostingersite.com/wp-content/uploads/2026/05/05868f48-0b5f-4ea7-b607-9d056e4e5902-1.png") center/cover no-repeat;
+  color: #fff;
+  position: relative;
+}
+
+.site-header {
+  width: 88%;
+  margin: auto;
+  padding: 35px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  white-space: pre-line;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.site-header nav {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.site-header a {
+  color: #fff;
+  font-size: 14px;
+}
+
+.nav-btn {
+  background: #d6b21f;
+  color: #10233c !important;
+  padding: 14px 24px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero-content h1,
+.hero-content h2,
+.hero-content h3,
+.section h2,
+.dockage h2,
+.comforts h2,
+.cta h2 {
+  font-family: Georgia, serif;
+}
+
+.hero-content h1 {
+  font-size: 58px;
+  margin: 0;
+}
+
+.hero-content h2 {
+  font-size: 32px;
+  margin: 10px 0 0;
+}
+
+.hero-content h3 {
+  font-size: 26px;
+  font-style: italic;
+  margin: 5px 0 20px;
+}
+
+.outline-btn {
+  display: inline-block;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 13px 28px;
+  border-radius: 5px;
+}
+
+.section {
+  width: 88%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 90px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.ph {
+  background: linear-gradient(135deg, #c8d4dd, #70899d);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.ph-small {
+  height: 230px;
+}
+
+.ph-tall {
+  height: 390px;
+  grid-row: span 2;
+}
+
+.ph-wide {
+  height: 380px;
+}
+
+.section h2,
+.dockage h2,
+.comforts h2,
+.cta h2 {
+  font-size: 44px;
+  line-height: 1.15;
+  margin: 0 0 25px;
+}
+
+em {
+  color: #b89f18;
+}
+
+.about-text p,
+.location p,
+.dockage p,
+.comforts p,
+.cta p {
+  line-height: 1.8;
+  color: #4d5968;
+}
+
+.about-text ul {
+  padding: 0;
+  margin-top: 25px;
+  list-style: none;
+}
+
+.about-text li {
+  margin: 14px 0;
+  font-weight: 700;
+}
+
+.dockage {
+  text-align: center;
+  padding: 75px 20px;
+  background: linear-gradient(rgba(207, 187, 72, .75), rgba(207, 187, 72, .75)),
+    url("https://grey-moose-264563.hostingersite.com/wp-content/uploads/2026/05/Rectangle-8-3.png") center/cover no-repeat;
+}
+
+.dark-btn {
+  display: inline-block;
+  background: #3f4758;
+  color: #fff;
+  padding: 14px 34px;
+  border-radius: 6px;
+  margin-top: 20px;
+}
+
+.comforts {
+  text-align: center;
+  padding: 90px 20px 110px;
+  background: linear-gradient(rgba(255,255,255,.75), rgba(255,255,255,.75)),
+    url("https://grey-moose-264563.hostingersite.com/wp-content/uploads/2026/05/Mask-group-24.png") center/cover no-repeat;
+}
+
+.amenities {
+  width: 88%;
+  max-width: 1120px;
+  margin: 60px auto 0;
+  background: rgba(0, 95, 115, .75);
+  color: #fff;
+  border-radius: 28px;
+  padding: 45px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.icon {
+  width: 58px;
+  height: 58px;
+  background: #fff;
+  color: #173147;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 15px;
+}
+
+.cta {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.footer {
+  background: linear-gradient(rgba(0, 65, 85, .85), rgba(0, 65, 85, .85)),
+    url("https://grey-moose-264563.hostingersite.com/wp-content/uploads/2026/05/Rectangle-14-3.png") center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 70px 20px 35px;
+}
+
+.footer h2 {
+  font-family: Georgia, serif;
+}
+
+.footer nav {
+  margin: 25px 0;
+}
+
+.footer a {
+  color: #fff;
+  margin: 0 18px;
+}
+
+@media (max-width: 768px) {
+  .site-header,
+  .site-header nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 38px;
+  }
+
+  .section {
+    grid-template-columns: 1fr;
+  }
+
+  .amenities {
+    grid-template-columns: 1fr;
+  }
+}
