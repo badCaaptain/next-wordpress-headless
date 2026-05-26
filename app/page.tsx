@@ -141,10 +141,10 @@ export default async function HomePage() {
           {acf?.cta_section?.btn?.url && (
               <a
                 className="outline-btn"
-                href={acf.banner_section.btn.url}
-                target={acf.banner_section.btn.target || "_self"}
+                href={acf.cta_section.btn.url}
+                target={acf.cta_section.btn.target || "_self"}
               >
-                {acf.banner_section.btn.title}
+                {acf.cta_section.btn.title}
               </a>
             )}
         </section>
@@ -179,10 +179,10 @@ export default async function HomePage() {
           {acf?.slower_section?.btn?.url && (
               <a
                 className="dark-btn"
-                href={acf.banner_section.btn.url}
-                target={acf.banner_section.btn.target || "_self"}
+                href={acf.slower_section.btn.url}
+                target={acf.slower_section.btn.target || "_self"}
               >
-                {acf.banner_section.btn.title}
+                {acf.slower_section.btn.title}
               </a>
             )}
           </div>
@@ -269,10 +269,10 @@ export default async function HomePage() {
           {acf?.stay_with_us_section?.btn?.url && (
               <a
                 className="dark-btn"
-                href={acf.banner_section.btn.url}
-                target={acf.banner_section.btn.target || "_self"}
+                href={acf.stay_with_us_section.url}
+                target={acf.stay_with_us_section.target || "_self"}
               >
-                {acf.banner_section.btn.title}
+                {acf.stay_with_us_section.title}
               </a>
             )}
         </section>
