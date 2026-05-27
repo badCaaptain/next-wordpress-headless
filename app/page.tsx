@@ -76,6 +76,7 @@ export default async function HomePage() {
         acf?.about_section?.content ||
         acf?.about_section?.key?.length > 0) && (
         <section className="about section">
+           <div className="container">
           {aboutHasImages && (
             <div className="image-grid">
               <ImageTag
@@ -114,6 +115,7 @@ export default async function HomePage() {
               </ul>
             )}
           </div>
+          </div>
         </section>
       )}
 
@@ -122,6 +124,7 @@ export default async function HomePage() {
         acf?.cta_section?.content ||
         acf?.cta_section?.btn) && (
         <section className="dockage" id="rates">
+          <div className="container">
           {acf?.cta_section?.title && <h2>{acf.cta_section.title}</h2>}
 
           {acf?.cta_section?.content && (
@@ -142,6 +145,7 @@ export default async function HomePage() {
                 {acf.cta_section.btn.title}
               </a>
             )}
+            </div>
         </section>
       )}
 
@@ -151,7 +155,7 @@ export default async function HomePage() {
         acf?.slower_section?.btn ||
         marinaHasImage) && (
         <section className="location section" id="location">
-          <div>
+          <div className="container">
             {acf?.slower_section?.title && (
               <h2>{acf.slower_section.title}</h2>
             )}

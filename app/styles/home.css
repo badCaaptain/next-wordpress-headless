@@ -20,6 +20,7 @@ a {
     justify-content: center;
         align-items: center;
 }
+.continer{max-width: 1200px;}
 
 .site-header {
   width: 88%;
@@ -100,7 +101,6 @@ a {
     align-items: center;
     gap: 70px;
     width: 100%;
-    max-width: 1200px;
     margin: 0 auto;
     padding: 90px 20px;
     display: grid;
@@ -170,8 +170,11 @@ em {
 }
 
 .about-text li {
-  margin: 14px 0;
-  font-weight: 700;
+margin: 10px 0;
+    font-weight: 600;
+    font-size: 22px;
+    color: #000;
+    font-family: Georgia, serif;
 }
 
 .dockage {
@@ -180,6 +183,7 @@ em {
   background: linear-gradient(rgba(207, 187, 72, .75), rgba(207, 187, 72, .75)),
     url("https://grey-moose-264563.hostingersite.com/wp-content/uploads/2026/05/Rectangle-8-3.png") center/cover no-repeat;
 }
+.dockage p{color:#121212}
 
 .location{
   background: #fff;
@@ -195,10 +199,11 @@ em {
 }
 
 .comforts {
-  text-align: center;
-  padding: 90px 20px 110px;
-  background: linear-gradient(rgba(255,255,255,.75), rgba(255,255,255,.75)),
-    url("https://grey-moose-264563.hostingersite.com/wp-content/uploads/2026/05/Mask-group-24.png") center/cover no-repeat;
+    text-align: center;
+    background: linear-gradient(#ffffff, #ffffff47), url(https://grey-moose-264563.hostingersite.com/wp-content/uploads/2026/05/Mask-group-24.png) 50% / cover no-repeat;
+    padding: 90px 20px 110px;
+    background-size: cover;
+    background-position: center center;
 }
 
 .amenities {
