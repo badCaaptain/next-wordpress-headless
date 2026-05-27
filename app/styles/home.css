@@ -180,10 +180,11 @@ margin: 10px 0;
 }
 
 .dockage {
-  text-align: center;
-  padding: 75px 20px;
-  background: linear-gradient(rgba(207, 187, 72, .75), rgba(207, 187, 72, .75)),
-    url("https://grey-moose-264563.hostingersite.com/wp-content/uploads/2026/05/Rectangle-8-3.png") center/cover no-repeat;
+    text-align: center;
+    background: #fff;
+    padding: 75px 20px;
+    background-size: cover;
+    background-position: center center;
 }
 .dockage p{color:#121212}
 

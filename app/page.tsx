@@ -48,7 +48,7 @@ export default async function HomePage() {
         >
 
           <div className="hero-content">
-            {acf?.banner_section?.title && <h1 className="text-5xl font-bold">{acf.banner_section.title}</h1>}
+            {acf?.banner_section?.title && <h1 className="text-5xl font-bold mb-3">{acf.banner_section.title}</h1>}
 
             {acf?.banner_section?.content && (
               <div
@@ -60,7 +60,7 @@ export default async function HomePage() {
 
             {acf?.banner_section?.btn?.url && (
               <a
-                className="outline-btn"
+                className="mt-4 dark-btn"
                 href={acf.banner_section.btn.url}
                 target={acf.banner_section.btn.target || "_self"}
               >
