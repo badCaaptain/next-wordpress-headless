@@ -76,7 +76,7 @@ a {
 
 .hero-content h1 {
   font-size: 58px;
-  margin: 0;
+  color: #fff;
 }
 
 .hero-content h2 {
@@ -175,10 +175,10 @@ em {
 
 .about-text li {
 margin: 10px 0;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 22px;
     color: #000;
-    font-family: Georgia, serif;
+    font-family: var(--font-eb-garamond);
 }
 
 .dockage {

@@ -81,7 +81,7 @@ export default async function HomePage() {
             <HtmlTitle
               tag="h1"
               html={acf?.banner_section?.title}
-              className="text-5xl font-bold mb-3"
+              className="text-5xl font-medium mb-3"
             />
 
             {acf?.banner_section?.content && (
