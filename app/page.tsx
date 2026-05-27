@@ -77,7 +77,7 @@ export default async function HomePage() {
         acf?.about_section?.key?.length > 0) && (
         <section className="about section">
            <div className="container mx-auto">
-            <div className="flex flex-col sm:flex-row">
+            <div className="flex flex-col sm:flex-row gap-10">
           {aboutHasImages && (
             <div className="image-grid">
               <ImageTag
