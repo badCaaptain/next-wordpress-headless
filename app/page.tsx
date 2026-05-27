@@ -47,7 +47,7 @@ export default async function HomePage() {
         >
 
           <div className="hero-content">
-            {acf?.banner_section?.title && <h1>{acf.banner_section.title}</h1>}
+            {acf?.banner_section?.title && <h1 className="text-5xl font-bold text-red-500">{acf.banner_section.title}</h1>}
 
             {acf?.banner_section?.content && (
               <div
@@ -194,6 +194,7 @@ export default async function HomePage() {
         acf?.comforts_section?.content ||
         acf?.comforts_section?.grid?.length > 0) && (
         <section className="comforts">
+          <div className="container">
           {acf?.comforts_section?.title && (
             <h2>{acf.comforts_section.title}</h2>
           )}
@@ -233,6 +234,7 @@ export default async function HomePage() {
                   );
                 })}
               </div>
+            </div>
         </section>
       )}
 
@@ -241,6 +243,7 @@ export default async function HomePage() {
         acf?.stay_with_us_section?.content ||
         acf?.stay_with_us_section?.btn) && (
         <section className="cta" id="reserve">
+          <div className="container">
           {acf?.stay_with_us_section?.title && (
             <h2>{acf.stay_with_us_section.title}</h2>
           )}
@@ -262,6 +265,7 @@ export default async function HomePage() {
                 {acf.stay_with_us_section.title}
               </a>
             )}
+            </div>
         </section>
       )}
  

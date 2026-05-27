@@ -14,11 +14,13 @@ a {
 
 .hero {
     color: #fff;
-    min-height: 100vh;
-    position: relative;
-    display: flex;
     justify-content: center;
-        align-items: center;
+    align-items: center;
+    min-height: 100vh;
+    display: flex;
+    position: relative;
+    background-size: cover;
+    background-position: center center;
 }
 .continer{max-width: 1200px;}
 
