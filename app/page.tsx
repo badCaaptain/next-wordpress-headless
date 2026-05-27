@@ -29,6 +29,7 @@ export default async function HomePage() {
   const acf = page?.acf || {};
 
   const bannerBg = getImg(acf?.banner_section?.bg_image);
+  const ctaBg = getImg(acf?.cta_section?.bg_image);
 
   const aboutHasImages =
     hasImg(acf?.about_section?.left_image_first) ||
@@ -125,7 +126,7 @@ export default async function HomePage() {
       {(acf?.cta_section?.title ||
         acf?.cta_section?.content ||
         acf?.cta_section?.btn) && (
-        <section className="dockage" id="rates">
+        <section className="dockage" id="rates" style={ctaBg ? { backgroundImage: `url(${ctaBg})` } : undefined}>
           <div className="custom-container">
           {acf?.cta_section?.title && <h2>{acf.cta_section.title}</h2>}
 
