@@ -17,11 +17,28 @@ const getImg = (img: any) => {
 
 const hasImg = (img: any) => Boolean(getImg(img));
 
-const ImageTag = ({ src, className }: any) => {
+const ImageTag = ({ src, className, alt = "" }: any) => {
   const imageUrl = getImg(src);
   if (!imageUrl) return null;
 
-  return <img src={imageUrl} alt="" className={className} />;
+  return <img src={imageUrl} alt={alt} className={className} />;
+};
+
+const HtmlTitle = ({
+  tag = "h2",
+  html = "",
+  className = "",
+}: any) => {
+  const Tag = tag;
+
+  if (!html) return null;
+
+  return (
+    <Tag
+      className={className}
+      dangerouslySetInnerHTML={{ __html: html }}
+    />
+  );
 };
 
 export default async function HomePage() {
@@ -38,17 +55,34 @@ export default async function HomePage() {
 
   const marinaHasImage = hasImg(acf?.slower_section?.image);
 
+  const comfortItems = [
+    acf?.comforts_section?.grid_1,
+    acf?.comforts_section?.grid_2,
+    acf?.comforts_section?.grid_3,
+    acf?.comforts_section?.grid_4,
+  ].filter(Boolean);
+
   return (
     <main className="home-page">
-      {/* HEADER + HERO */}
-      {(bannerBg || acf?.banner_section?.title || acf?.banner_section?.content) && (
+      {/* HERO */}
+      {(bannerBg ||
+        acf?.banner_section?.title ||
+        acf?.banner_section?.content ||
+        acf?.banner_section?.btn?.url) && (
         <section
           className="hero"
-          style={bannerBg ? { backgroundImage: `url(${bannerBg})` } : undefined}
+          style={
+            bannerBg
+              ? { backgroundImage: `url(${bannerBg})` }
+              : undefined
+          }
         >
-
           <div className="hero-content">
-            {acf?.banner_section?.title && <h1 className="text-5xl font-bold mb-3">{acf.banner_section.title}</h1>}
+            <HtmlTitle
+              tag="h1"
+              html={acf?.banner_section?.title}
+              className="text-5xl font-bold mb-3"
+            />
 
             {acf?.banner_section?.content && (
               <div
@@ -77,47 +111,50 @@ export default async function HomePage() {
         acf?.about_section?.content ||
         acf?.about_section?.key?.length > 0) && (
         <section className="about section">
-           <div className="container mx-auto">
+          <div className="container mx-auto">
             <div className="flex flex-col sm:flex-row gap-10">
-          {aboutHasImages && (
-            <div className="image-grid">
-              <ImageTag
-                src={acf?.about_section?.left_image_first}
-                className="ph ph-small"
-              />
+              {aboutHasImages && (
+                <div className="image-grid">
+                  <ImageTag
+                    src={acf?.about_section?.left_image_first}
+                    className="ph ph-small"
+                  />
 
-              <ImageTag
-                src={acf?.about_section?.left_image_second}
-                className="ph ph-tall"
-              />
+                  <ImageTag
+                    src={acf?.about_section?.left_image_second}
+                    className="ph ph-tall"
+                  />
 
-              <ImageTag
-                src={acf?.about_section?.right_image}
-                className="ph ph-small"
-              />
+                  <ImageTag
+                    src={acf?.about_section?.right_image}
+                    className="ph ph-small"
+                  />
+                </div>
+              )}
+
+              <div className="about-text">
+                <HtmlTitle html={acf?.about_section?.title} />
+
+                {acf?.about_section?.content && (
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: acf.about_section.content,
+                    }}
+                  />
+                )}
+
+                {acf?.about_section?.key?.length > 0 && (
+                  <ul>
+                    {acf.about_section.key.map(
+                      (item: any, i: number) =>
+                        item?.title ? (
+                          <li key={i}>{item.title}</li>
+                        ) : null
+                    )}
+                  </ul>
+                )}
+              </div>
             </div>
-          )}
-
-          <div className="about-text">
-            {acf?.about_section?.title && <h2>{acf.about_section.title}</h2>}
-
-            {acf?.about_section?.content && (
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: acf.about_section.content,
-                }}
-              />
-            )}
-
-            {acf?.about_section?.key?.length > 0 && (
-              <ul>
-                {acf.about_section.key.map((item: any, i: number) => (
-                  <li key={i}>{item?.title}</li>
-                ))}
-              </ul>
-            )}
-          </div>
-          </div>
           </div>
         </section>
       )}
@@ -125,21 +162,29 @@ export default async function HomePage() {
       {/* DOCKAGE */}
       {(acf?.cta_section?.title ||
         acf?.cta_section?.content ||
-        acf?.cta_section?.btn) && (
-        <section className="dockage" id="rates" style={ctaBg ? { backgroundImage: `url(${ctaBg})` } : undefined}>
+        acf?.cta_section?.btn?.url ||
+        ctaBg) && (
+        <section
+          className="dockage"
+          id="rates"
+          style={
+            ctaBg
+              ? { backgroundImage: `url(${ctaBg})` }
+              : undefined
+          }
+        >
           <div className="custom-container">
-          {acf?.cta_section?.title && <h2>{acf.cta_section.title}</h2>}
+            <HtmlTitle html={acf?.cta_section?.title} />
 
-          {acf?.cta_section?.content && (
-            <div
-              dangerouslySetInnerHTML={{
-                __html: acf.cta_section.content,
-              }}
-            />
-          )}
+            {acf?.cta_section?.content && (
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: acf.cta_section.content,
+                }}
+              />
+            )}
 
-
-          {acf?.cta_section?.btn?.url && (
+            {acf?.cta_section?.btn?.url && (
               <a
                 className="outline-btn"
                 href={acf.cta_section.btn.url}
@@ -148,50 +193,47 @@ export default async function HomePage() {
                 {acf.cta_section.btn.title}
               </a>
             )}
-            </div>
+          </div>
         </section>
       )}
 
-      {/* LOCATION */}
+      {/* LOCATION / SLOWER SECTION */}
       {(acf?.slower_section?.title ||
         acf?.slower_section?.content ||
-        acf?.slower_section?.btn ||
+        acf?.slower_section?.btn?.url ||
         marinaHasImage) && (
         <section className="location section" id="location">
           <div className="container mx-auto">
-            <div className="flex flex-col sm:flex-row gap-10"> 
+            <div className="flex flex-col sm:flex-row gap-10">
               <div>
-            {acf?.slower_section?.title && (
-              <h2>{acf.slower_section.title}</h2>
-            )}
+                <HtmlTitle html={acf?.slower_section?.title} />
 
-            {acf?.slower_section?.content && (
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: acf.slower_section.content,
-                }}
-              />
-            )}
+                {acf?.slower_section?.content && (
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: acf.slower_section.content,
+                    }}
+                  />
+                )}
 
+                {acf?.slower_section?.btn?.url && (
+                  <a
+                    className="dark-btn"
+                    href={acf.slower_section.btn.url}
+                    target={acf.slower_section.btn.target || "_self"}
+                  >
+                    {acf.slower_section.btn.title}
+                  </a>
+                )}
+              </div>
 
-          {acf?.slower_section?.btn?.url && (
-              <a
-                className="dark-btn"
-                href={acf.slower_section.btn.url}
-                target={acf.slower_section.btn.target || "_self"}
-              >
-                {acf.slower_section.btn.title}
-              </a>
-            )}
-          </div>
-
-          {marinaHasImage && (
-            <ImageTag
-              src={acf?.slower_section?.image}
-              className="ph ph-wide"
-            />
-          )}
-          </div>
+              {marinaHasImage && (
+                <ImageTag
+                  src={acf?.slower_section?.image}
+                  className="ph ph-wide"
+                />
+              )}
+            </div>
           </div>
         </section>
       )}
@@ -199,28 +241,22 @@ export default async function HomePage() {
       {/* COMFORTS */}
       {(acf?.comforts_section?.title ||
         acf?.comforts_section?.content ||
-        acf?.comforts_section?.grid?.length > 0) && (
+        comfortItems.length > 0) && (
         <section className="comforts">
           <div className="container mx-auto">
-          {acf?.comforts_section?.title && (
-            <h2>{acf.comforts_section.title}</h2>
-          )}
+            <HtmlTitle html={acf?.comforts_section?.title} />
 
-          {acf?.comforts_section?.content && (
-            <div
-              dangerouslySetInnerHTML={{
-                __html: acf.comforts_section.content,
-              }}
-            />
-          )}
+            {acf?.comforts_section?.content && (
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: acf.comforts_section.content,
+                }}
+              />
+            )}
 
-          <div className="amenities">
-                {[
-                  acf?.comforts_section?.grid_1,
-                  acf?.comforts_section?.grid_2,
-                  acf?.comforts_section?.grid_3,
-                  acf?.comforts_section?.grid_4,
-                ].map((item: any, i: number) => {
+            {comfortItems.length > 0 && (
+              <div className="amenities">
+                {comfortItems.map((item: any, i: number) => {
                   const iconUrl = getImg(item?.image);
                   const title = item?.title;
 
@@ -231,7 +267,7 @@ export default async function HomePage() {
                       {iconUrl && (
                         <img
                           src={iconUrl}
-                          alt=""
+                          alt={title || ""}
                           className="icon"
                         />
                       )}
@@ -241,41 +277,39 @@ export default async function HomePage() {
                   );
                 })}
               </div>
-            </div>
+            )}
+          </div>
         </section>
       )}
 
       {/* STAY WITH US */}
       {(acf?.stay_with_us_section?.title ||
         acf?.stay_with_us_section?.content ||
-        acf?.stay_with_us_section?.btn) && (
+        acf?.stay_with_us_section?.btn?.url) && (
         <section className="cta" id="reserve">
           <div className="container mx-auto">
-          {acf?.stay_with_us_section?.title && (
-            <h2>{acf.stay_with_us_section.title}</h2>
-          )}
+            <HtmlTitle html={acf?.stay_with_us_section?.title} />
 
-          {acf?.stay_with_us_section?.content && (
-            <div
-              dangerouslySetInnerHTML={{
-                __html: acf.stay_with_us_section.content,
-              }}
-            />
-          )}
+            {acf?.stay_with_us_section?.content && (
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: acf.stay_with_us_section.content,
+                }}
+              />
+            )}
 
-          {acf?.stay_with_us_section?.btn?.url && (
+            {acf?.stay_with_us_section?.btn?.url && (
               <a
                 className="dark-btn"
-                href={acf.stay_with_us_section.url}
-                target={acf.stay_with_us_section.target || "_self"}
+                href={acf.stay_with_us_section.btn.url}
+                target={acf.stay_with_us_section.btn.target || "_self"}
               >
-                {acf.stay_with_us_section.title}
+                {acf.stay_with_us_section.btn.title}
               </a>
             )}
-            </div>
+          </div>
         </section>
       )}
- 
     </main>
   );
 }
