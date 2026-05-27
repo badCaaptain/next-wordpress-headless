@@ -12,6 +12,16 @@ a {
   text-decoration: none;
 }
 
+.header-btn {
+    background: #DAC23B;
+    padding: 14px 34px;
+    border-radius: 6px;
+    color: #122146;
+}
+
+.logo-img {
+    max-width: 140px;
+}
 .hero {
     color: #fff;
     justify-content: center;
@@ -25,12 +35,7 @@ a {
 .continer{max-width: 1200px;}
 
 .site-header {
-  width: 88%;
-  margin: auto;
-  padding: 35px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
 }
 
 .logo {

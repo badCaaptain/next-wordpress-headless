@@ -4,7 +4,7 @@ export default async function Header() {
   const menuItems = await getMenuByLocation("main-menu");
 
   return (
-    <header className="site-header">
+    <header className="site-header p-5">
       <div className="container mx-auto">
         <div className="flex flex-row justify-between gap-5 ">
             <div className="logo">
