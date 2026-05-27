@@ -157,7 +157,9 @@ export default async function HomePage() {
         acf?.slower_section?.btn ||
         marinaHasImage) && (
         <section className="location section" id="location">
-          <div className="container">
+          <div className="container mx-auto">
+            <div className="flex flex-col sm:flex-row gap-10"> 
+              <div>
             {acf?.slower_section?.title && (
               <h2>{acf.slower_section.title}</h2>
             )}
@@ -188,6 +190,8 @@ export default async function HomePage() {
               className="ph ph-wide"
             />
           )}
+          </div>
+          </div>
         </section>
       )}
 
