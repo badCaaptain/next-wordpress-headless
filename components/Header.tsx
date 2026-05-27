@@ -6,7 +6,7 @@ export default async function Header() {
   return (
     <header className="site-header">
       <div className="container mx-auto">
-        <div className="flex-col justify-between gap-5 ">
+        <div className="flex flex-row justify-between gap-5 ">
             <div className="logo">
               <a href="/">
                 <img
@@ -17,7 +17,7 @@ export default async function Header() {
               </a>
             </div>
 
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-row gap-5 items-center">
               <nav>
                 {menuItems.map((item: any) => (
                   <a
