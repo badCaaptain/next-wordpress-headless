@@ -70,7 +70,8 @@ a {
 .dockage h2,
 .comforts h2,
 .cta h2 {
-  font-family: Georgia, serif;
+  font-family: var(--font-eb-garamond);
+  color:#0F1932;
 }
 
 .hero-content h1 {
@@ -150,6 +151,7 @@ a {
 }
 .hero-content h1 span, .hero-content h2 span, .hero-content h3 span, .section h2 span, .dockage h2 span, .comforts h2 span, .cta h2 span{
   font-style: italic;
+  color: #B19914;
 }
 
 em {
