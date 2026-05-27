@@ -236,7 +236,7 @@ export default async function HomePage() {
       {(acf?.stay_with_us_section?.title ||
         acf?.stay_with_us_section?.content ||
         acf?.stay_with_us_section?.btn) && (
-        <section className="cta section" id="reserve">
+        <section className="cta" id="reserve">
           {acf?.stay_with_us_section?.title && (
             <h2>{acf.stay_with_us_section.title}</h2>
           )}
