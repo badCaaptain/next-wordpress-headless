@@ -99,13 +99,8 @@ a {
 
 .section {
     background: #fff;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 70px;
     width: 100%;
-    margin: 0 auto;
     padding: 90px 20px;
-    display: grid;
 }
 
 .image-grid {
