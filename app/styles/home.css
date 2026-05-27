@@ -103,6 +103,11 @@ a {
     padding: 90px 20px;
 }
 
+.custom-container{
+      max-width: 850px;
+    margin: 0 auto;
+}
+
 .image-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;

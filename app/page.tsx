@@ -126,7 +126,7 @@ export default async function HomePage() {
         acf?.cta_section?.content ||
         acf?.cta_section?.btn) && (
         <section className="dockage" id="rates">
-          <div className="container">
+          <div className="custom-container">
           {acf?.cta_section?.title && <h2>{acf.cta_section.title}</h2>}
 
           {acf?.cta_section?.content && (
@@ -200,7 +200,7 @@ export default async function HomePage() {
         acf?.comforts_section?.content ||
         acf?.comforts_section?.grid?.length > 0) && (
         <section className="comforts">
-          <div className="container">
+          <div className="container mx-auto">
           {acf?.comforts_section?.title && (
             <h2>{acf.comforts_section.title}</h2>
           )}
@@ -249,7 +249,7 @@ export default async function HomePage() {
         acf?.stay_with_us_section?.content ||
         acf?.stay_with_us_section?.btn) && (
         <section className="cta" id="reserve">
-          <div className="container">
+          <div className="container mx-auto">
           {acf?.stay_with_us_section?.title && (
             <h2>{acf.stay_with_us_section.title}</h2>
           )}
