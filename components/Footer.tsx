@@ -5,7 +5,13 @@ export default async function Footer() {
 
   return (
     <footer className="footer" id="contact">
-      <h2>PORT ST. MARY’S MARINA</h2>
+      <a href="/">
+              <img
+                src="https://grey-moose-264563.hostingersite.com/wp-content/uploads/2026/05/attachment7-1.png"
+                alt="Port St. Mary's Marina"
+                className="logo-img"
+              />
+            </a>
 
       <nav>
         {menuItems.map((item: any) => (
