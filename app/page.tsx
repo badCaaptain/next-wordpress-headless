@@ -186,7 +186,7 @@ export default async function HomePage() {
 
             {acf?.cta_section?.btn?.url && (
               <a
-                className="outline-btn"
+                className="dark-btn mt-4"
                 href={acf.cta_section.btn.url}
                 target={acf.cta_section.btn.target || "_self"}
               >
