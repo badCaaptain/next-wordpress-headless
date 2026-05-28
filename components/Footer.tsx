@@ -5,13 +5,16 @@ export default async function Footer() {
 
   return (
     <footer className="footer" id="contact">
-      <a href="/">
+      <div className="footer-logo">
+          <a href="/">
               <img
                 src="https://grey-moose-264563.hostingersite.com/wp-content/uploads/2026/05/attachment7-1.png"
                 alt="Port St. Mary's Marina"
-                className="logo-img"
+                className="logo-img mx-auto"
               />
             </a>
+      </div>
+      
 
       <nav>
         {menuItems.map((item: any) => (
@@ -22,8 +25,8 @@ export default async function Footer() {
       </nav>
 
        <p>000 (000-000) | info@portstmarina.com | 3, lorem ipsum</p>
-        <small>
-          Copyright © 2026 Port St. Mary’s Marina, Inc. All rights reserved.
+        <small className="mt-2">
+          Copyright © {new Date().getFullYear()} Port St. Mary’s Marina, Inc. All rights reserved.
         </small>
     </footer>
   );
