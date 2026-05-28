@@ -23,8 +23,9 @@ export default async function Footer() {
           </a>
         ))}
       </nav>
-
-       <p>000 (000-000) | info@portstmarina.com | 3, lorem ipsum</p>
+<div className="flex flex-col sm:flex-row gap-5 mb-3">
+<p>000 (000-000) </p>|<p> info@portstmarina.com </p>|<p> 3, lorem ipsum</p>
+</div>
         <small className="mt-2">
           Copyright © {new Date().getFullYear()} Port St. Mary’s Marina, Inc. All rights reserved.
         </small>
