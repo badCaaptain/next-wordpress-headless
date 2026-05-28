@@ -258,8 +258,8 @@ margin: 10px 0;
   font-family: Georgia, serif;
 }
 
-.footer nav {
-  margin: 25px 0;
+.footer p {
+    font-size: 20px;
 }
 
 .footer a {

@@ -94,7 +94,7 @@ export default async function HomePage() {
 
             {acf?.banner_section?.btn?.url && (
               <a
-                className="mt-4 dark-btn"
+                className="mt-4 outline-btn"
                 href={acf.banner_section.btn.url}
                 target={acf.banner_section.btn.target || "_self"}
               >

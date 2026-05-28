@@ -16,7 +16,7 @@ export default async function Footer() {
       </div>
       
 
-      <nav>
+      <nav className="mb-4"> 
         {menuItems.map((item: any) => (
           <a key={item.ID || item.id} href={item.url} target={item.target || "_self"}>
             {item.title}
