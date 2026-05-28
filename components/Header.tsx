@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
+import Link from "next/link";
 export default function Header({
   menuItems,
 }: any) {
@@ -49,18 +49,25 @@ export default function Header({
           {/* Menu + Button */}
           <div className="flex flex-row gap-5 items-center">
             <nav className="flex gap-5">
-              {menuItems?.map((item: any) => (
-                <a
-                  key={item.ID || item.id}
-                  href={item.url}
-                  target={
-                    item.target || "_self"
-                  }
-                >
-                  {item.title}
-                </a>
-              ))}
-            </nav>
+  {menuItems?.map((item: any) => {
+    const localPath = item.url
+      ?.replace(
+        "https://grey-moose-264563.hostingersite.com",
+        ""
+      )
+      ?.replace(/\/$/, "");
+
+    return (
+      <Link
+        key={item.ID || item.id}
+        href={localPath || "/"}
+        target={item.target || "_self"}
+      >
+        {item.title}
+      </Link>
+    );
+  })}
+</nav>
 
             <a
               href="#"
