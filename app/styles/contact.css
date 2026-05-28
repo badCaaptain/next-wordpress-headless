@@ -27,7 +27,6 @@
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 850px;
   text-align: center;
   color: #fff;
 }
@@ -69,22 +68,23 @@
 .contact-left {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 20px;
 }
 
 .contact-item h4 {
-  font-size: 14px;
+  font-size: 28px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #5c5c5c;
-  margin-bottom: 10px;
+  color: #000000;
+  font-weight: 500;
 }
 
 .contact-item a,
 .contact-item p {
   font-size: 28px;
   line-height: 1.5;
-  color: #1e1e1e;
+  color: #000000;
+  font-weight: 700;
   text-decoration: none;
   margin: 0;
 }

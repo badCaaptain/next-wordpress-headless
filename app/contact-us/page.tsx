@@ -52,8 +52,8 @@ export default async function ContactPage() {
 
       {/* Contact Content */}
       <section className="contact-content section">
-        <div className="container contact-grid">
-
+        <div className="container mx-auto">
+          <div className="flex flex-col sm:flex-row gap-10">
           {/* Left */}
           <div className="contact-left">
             <div className="contact-item">
@@ -112,6 +112,7 @@ export default async function ContactPage() {
     __html: formHtml,
   }}
 />
+          </div>
           </div>
         </div>
       </section>

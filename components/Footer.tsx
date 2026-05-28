@@ -23,7 +23,7 @@ export default async function Footer() {
           </a>
         ))}
       </nav>
-<div className="flex flex-col sm:flex-row gap-5 mb-3">
+<div className="flex flex-col sm:flex-row gap-5 mb-3 justify-center">
 <p>000 (000-000) </p>|<p> info@portstmarina.com </p>|<p> 3, lorem ipsum</p>
 </div>
         <small className="mt-2">
