@@ -6,7 +6,13 @@ import { getMenuByLocation } from "@/lib/wordpress";
 
 const ebGaramond = EB_Garamond({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: [
+    "400",
+    "500",
+    "600",
+    "700",
+    "800",
+  ],
   variable: "--font-eb-garamond",
 });
 
@@ -15,12 +21,19 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const menuItems = await getMenuByLocation("main-menu");
+  const menuItems =
+    await getMenuByLocation(
+      "main-menu"
+    );
 
   return (
     <html lang="en">
-      <body className={`main-body ${ebGaramond.variable}`}>
-        <Header menuItems={menuItems} />
+      <body
+        className={`main-body ${ebGaramond.variable}`}
+      >
+        <Header
+          menuItems={menuItems}
+        />
         {children}
         <Footer />
       </body>
